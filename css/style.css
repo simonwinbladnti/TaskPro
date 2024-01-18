@@ -19,6 +19,7 @@ header {
     height: 15vh;
     box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.05);
     z-index: 10;
+    background-color: white;
 }
 
 header .header-content {
@@ -40,7 +41,7 @@ nav {
      top: 0;
      left: -30vw;
      transition: left 0.3s linear;
-     z-index: -10;
+     z-index: 0;
 }
 
 nav ul {
@@ -52,8 +53,6 @@ nav ul {
     margin-left: 20px;
     padding: 0px;
 }
-
-
 
 nav ul li {
     margin-top: 10px;
@@ -75,9 +74,22 @@ nav ul a {
 }
 
 main { 
-    grid-area: 2 / 2 / 6 / 6; 
+    grid-area: 2 / 1 / 6 / 6; 
     display: flex; 
     justify-content: center; 
+    z-index: -1;
+}
+
+.background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    background-image: url(../img/calendar.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .show{
