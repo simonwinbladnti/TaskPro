@@ -13,3 +13,12 @@ function showMenu() {
 }
 
 selectBurger.addEventListener('click', showMenu);
+
+
+let addTasks = document.querySelector(".add-task");
+
+function addTask() {
+    console.log("hej");
+}
+
+addTasks.addEventListener('click', addTask);

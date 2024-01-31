@@ -16,9 +16,10 @@
                     <h1>TaskPro</h1>
                 </div>
                 <div class="left-section">                
+                    <i class="fa-solid fa-plus fa-2x add-task"></i>
                 </div>
             </div>
-        </header>      
+        </header>
         <nav>
             <ul>
                 <li>
@@ -32,13 +33,59 @@
             </ul>
         </nav>
         <main>
-            <div class="main-header">
-                    <h1>TASK PRO</h1>
-                    <p>Your only task manager</p>
-
+            <div class="calendar-main">
+                <div class="monday">
+                    <p class="monday-text">Monday</p>
+                    <div class="calendar-tasks">
+                        <div class="task"><h4>Uppgift 1</h4><p>Gör läxorna</p></div>
+                        <div class="task"><h4>Uppgift 1</h4><p>Gör läxorna</p></div>
+                        <div class="task"><h4>Uppgift 1</h4><p>Gör läxorna</p></div>
+                        <div class="task"><h4>Uppgift 1</h4><p>Gör läxorna</p></div>
+                        <div class="task"><h4>Uppgift 1</h4><p>Gör läxorna</p></div>
+                    </div>
+                </div>
+                <div class="tuesday">
+                    <p class="tuesday-text">Tuesday</p>
+                </div>
+                <div class="wednesday">
+                    <p class="wednesday-text">Wednesday</p>
+                </div>
+                <div class="thursday">
+                    <p class="thursday-text">Thursday</p>
+                </div>
+                <div class="friday">
+                    <p class="friday-text">Friday</p>
+                </div>
+                <div class="saturday">
+                    <p class="saturday-text">Saturday</p>
+                </div>
+                <div class="sunday">
+                    <p class="sunday-text">Sunday</p>
+                </div>
             </div>
-            <div class="background-overlay"></div>
         </main>
+        <div class="add-tasks">
+            <h3>Add a task</h3>
+            <div class="form-container">
+                <label for="label">Label:</label>
+                <input type="text" id="label" name="label" placeholder="Enter label">
+                <label for="description">Description:</label>
+                <input type="text" id="description" name="description" placeholder="Enter description">
+            
+                <label for="days">Day:</label>
+                <select id="days" name="days">
+                  <option value="mon">Monday</option>
+                  <option value="tue">Tuesday</option>
+                  <option value="wed">Wednesday</option>
+                  <option value="thu">Thursday</option>
+                  <option value="fri">Friday</option>
+                  <option value="sat">Saturday</option>
+                  <option value="sun">Sunday</option>
+                </select>
+            
+                <button type="submit">Submit</button>
+              </div>
+        </div>
     </div>
     
     <script src="js/script.js"></script>
