@@ -187,6 +187,7 @@ main {
 
 
 .add-tasks {
+    display: none;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -202,6 +203,15 @@ main {
 
 .add-tasks h3 {
     margin: 0;
+}
+
+.add-tasks-show {
+    display: block !important;
+}
+
+.add-task-header {
+    display: flex;
+    align-items: center;
 }
 
 .task:nth-child(even) {background-color: #f2f2f2;}
@@ -229,8 +239,4 @@ cursor: pointer;
 
 button:hover {
 background-color: #45a049;
-}
-
-#description {
-    width: 22rem;
 }

@@ -37,7 +37,7 @@
                 <div class="monday">
                     <p class="monday-text">Monday</p>
                     <div class="calendar-tasks">
-                        <div class="task"><h4>Uppgift 1</h4><p>Gör läxorna</p></div>
+                        <div class="task" id="task1"><h4>Uppgift 1</h4><p>Gör läxorna</p></div>
                         <div class="task"><h4>Uppgift 1</h4><p>Gör läxorna</p></div>
                         <div class="task"><h4>Uppgift 1</h4><p>Gör läxorna</p></div>
                         <div class="task"><h4>Uppgift 1</h4><p>Gör läxorna</p></div>
@@ -46,26 +46,41 @@
                 </div>
                 <div class="tuesday">
                     <p class="tuesday-text">Tuesday</p>
+                    <div class="calendar-tasks">
+                    </div>
                 </div>
                 <div class="wednesday">
                     <p class="wednesday-text">Wednesday</p>
+                    <div class="calendar-tasks">
+                    </div>
                 </div>
                 <div class="thursday">
                     <p class="thursday-text">Thursday</p>
+                    <div class="calendar-tasks">
+                    </div>
                 </div>
                 <div class="friday">
                     <p class="friday-text">Friday</p>
+                    <div class="calendar-tasks">
+                    </div>
                 </div>
                 <div class="saturday">
                     <p class="saturday-text">Saturday</p>
+                    <div class="calendar-tasks">
+                    </div>
                 </div>
                 <div class="sunday">
                     <p class="sunday-text">Sunday</p>
+                    <div class="calendar-tasks">
+                    </div>
                 </div>
             </div>
         </main>
         <div class="add-tasks">
-            <h3>Add a task</h3>
+            <div class="add-task-header">
+                <h3>Add a task</h3>
+                <i class="fa-solid fa-x close-task"></i>
+            </div>
             <div class="form-container">
                 <label for="label">Label:</label>
                 <input type="text" id="label" name="label" placeholder="Enter label">
@@ -74,16 +89,16 @@
             
                 <label for="days">Day:</label>
                 <select id="days" name="days">
-                  <option value="mon">Monday</option>
-                  <option value="tue">Tuesday</option>
-                  <option value="wed">Wednesday</option>
-                  <option value="thu">Thursday</option>
-                  <option value="fri">Friday</option>
-                  <option value="sat">Saturday</option>
-                  <option value="sun">Sunday</option>
+                  <option value="monday">Monday</option>
+                  <option value="tuesday">Tuesday</option>
+                  <option value="wednesday">Wednesday</option>
+                  <option value="thursday">Thursday</option>
+                  <option value="friday">Friday</option>
+                  <option value="saturday">Saturday</option>
+                  <option value="sunday">Sunday</option>
                 </select>
             
-                <button type="submit">Submit</button>
+                <button type="submit" id="submit">Submit</button>
               </div>
         </div>
     </div>
