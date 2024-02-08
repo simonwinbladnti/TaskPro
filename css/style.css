@@ -24,7 +24,7 @@ header {
 
 header .header-content {
     display: flex;
-    justify-content: space-between;  /* Updated to use space-between to push items to the edges */
+    justify-content: space-between; 
     align-items: center;
     height: 100%;
 }
@@ -33,7 +33,7 @@ header .header-content {
     margin-left: 20px;
 }
 
-.left-section i {
+.left-section {
     float: left;
     margin-right: 20px;
 }
@@ -45,9 +45,6 @@ header .header-content {
     width: 200px;
 }
 
-
-
-
 nav {
      grid-area: 2 / 1 / 6 / 2; 
      background-color: rgb(255, 255, 255) !important;
@@ -58,6 +55,7 @@ nav {
      left: -30vw;
      transition: left 0.3s linear;
      z-index: 0;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
 }
 
 nav ul {
@@ -92,7 +90,6 @@ nav ul a {
 main { 
     grid-area: 2 / 1 / 6 / 6; 
     display: flex; 
-    z-index: -1;
     justify-content: center; 
 }
 
@@ -101,7 +98,7 @@ main {
 }
 
 .main-header h1 {
-    font-size: 96px;
+    font-size: 6rem;
     margin-bottom: 0px;
 }
 
@@ -175,7 +172,7 @@ main {
     align-items: center;
     width: 100%;
     overflow: hidden; 
-
+    text-align: center;
 }
 
 .task h4 {
@@ -190,7 +187,9 @@ main {
     overflow: hidden; 
 }
 
-
+.calendar-tasks div:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+}
 
 .add-tasks {
     display: none;
@@ -218,31 +217,126 @@ main {
 .add-task-header {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .task:nth-child(even) {background-color: #f2f2f2;}
 
-label {
-display: block;
-margin-bottom: 8px;
+.form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+}
+    
+.form-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
 }
 
-select {
-width: 100%;
-padding: 8px;
-margin-bottom: 16px;
-box-sizing: border-box;
+.form-container input[type="text"],
+.form-container select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+    
+.form-container button {
+    width: 100%;
+    background-color: #4caf50;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+    
+.form-container button:hover {
+    background-color: #45a049;
 }
 
-button {
-background-color: #4caf50;
-color: #fff;
-padding: 10px;
-border: none;
-border-radius: 4px;
-cursor: pointer;
+.error {
+    border-color: red !important;
 }
 
-button:hover {
-background-color: #45a049;
+.remove-tasks {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 25vw;
+    height: 20vh;
+    border-radius: 20px;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    background-color: #fff; 
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+    text-align: center;
+}
+
+#confirm {
+    background-color: #2ecc71;
+}
+
+#cancel {
+    background-color: red;
+}
+
+.remove-tasks button {
+    width: 5vw;
+    border-radius: 5px;
+    border: none !important;
+    color: white !important;
+    font-size: 30px;
+    margin: 20px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.remove-tasks button:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); 
+}
+
+.remove-tasks-show {
+    display: block !important;
+}
+
+@media only screen and (max-width: 600px) {
+    nav {
+        width: 42vw;
+        left: -46vw;
+    }
+    .calendar-main {
+        grid-template-columns: repeat(7, 100%);
+        overflow: auto;
+    }
+
+    .add-tasks {
+        width: 78vw;
+    }
+
+    .remove-tasks {
+        width: 70vw;
+    }
+
+    .remove-tasks button {
+        width: 20vw;
+    }
+
+    .task h4 {
+        font-size: 2rem;
+    }
+
+    .task p {
+        font-size: 1rem;
+    }
 }

@@ -37,11 +37,6 @@
                 <div class="monday">
                     <p class="monday-text">Monday</p>
                     <div class="calendar-tasks">
-                        <div class="task" id="task1"><h4>Uppgift 1</h4><p>Gör läxorna</p></div>
-                        <div class="task"><h4>Uppgift 1</h4><p>Gör läxorna</p></div>
-                        <div class="task"><h4>Uppgift 1</h4><p>Gör läxorna</p></div>
-                        <div class="task"><h4>Uppgift 1</h4><p>Gör läxorna</p></div>
-                        <div class="task"><h4>Uppgift 1</h4><p>Gör läxorna</p></div>
                     </div>
                 </div>
                 <div class="tuesday">
@@ -78,15 +73,20 @@
         </main>
         <div class="add-tasks">
             <div class="add-task-header">
-                <h3>Add a task</h3>
-                <i class="fa-solid fa-x close-task"></i>
+                <div class="right">
+                    <h3>Add a task</h3>
+                </div>
+                <div class="left">
+                    <i class="fa-solid fa-x close-task"></i>
+                </div>
             </div>
             <div class="form-container">
                 <label for="label">Label:</label>
                 <input type="text" id="label" name="label" placeholder="Enter label">
+                
                 <label for="description">Description:</label>
                 <input type="text" id="description" name="description" placeholder="Enter description">
-            
+                
                 <label for="days">Day:</label>
                 <select id="days" name="days">
                   <option value="monday">Monday</option>
@@ -97,9 +97,16 @@
                   <option value="saturday">Saturday</option>
                   <option value="sunday">Sunday</option>
                 </select>
-            
+                
                 <button type="submit" id="submit">Submit</button>
               </div>
+        </div>
+        <div class="remove-tasks">
+            <h3>Do you want to remove task?</h3>
+            <div class="button-container">
+                <button id="confirm">Yes</button>
+                <button id="cancel">No</button>
+            </div>
         </div>
     </div>
     
